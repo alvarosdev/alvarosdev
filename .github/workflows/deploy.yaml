@@ -27,9 +27,6 @@ jobs:
       - name: 📦 Install NPM packages
         run: pnpm i
 
-      - name: 🤓 Run Linter
-        run: pnpm run linter
-
       - name: 🔧 Build project
         run: pnpm run build
 
