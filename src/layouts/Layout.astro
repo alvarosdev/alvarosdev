@@ -1,37 +1,79 @@
 ---
 import "@fontsource-variable/outfit";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { SEO } from "astro-seo";
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, image } = Astro.props;
+const titlePage = `Alvarosdev - ${title}`;
+const imagePage = image ?? "https://alvaros.dev/bg.jpg";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="robots" content="index, follow" />
-		<meta name="theme-color" content="#000" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<title>Alvarosdev - {title}</title>
+		<SEO
+			charset="UTF-8"
+			title={titlePage}
+			description={description ?? "Software Developer"}
+			openGraph={{
+				basic: {
+					title: titlePage,
+					type: "website",
+					image: imagePage,
+				},
+			}}
+			extend={{
+				link: [{ rel: "icon", href: "/favicon.png" }],
+				meta: [
+					{
+						name: "og:description",
+						content: description ?? "Software Developer",
+					},
+					{
+						name: "og:title",
+						content: titlePage,
+					},
+					{
+						name: "og:image",
+						content: imagePage,
+					},
+					{
+						name: "og:type",
+						content: "website",
+					},
+					{
+						name: "viewport",
+						content: "width=device-width, initial-scale=1",
+					},
+					{
+						name: "theme-color",
+						content: "#000",
+					},
+					{
+						name: "robots",
+						content: "index, follow",
+					},
+				],
+			}}
+		/>
 	</head>
-
 	<body>
 		<div
 			class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 		>
 		</div>
 		<slot />
+		<style is:global>
+			body {
+				font-family: "Outfit Variable", sans-serif;
+				@apply text-white;
+			}
+		</style>
 	</body>
-
-	<style is:global>
-		body {
-			font-family: "Outfit Variable", sans-serif;
-			@apply text-white;
-		}
-	</style>
 </html>
