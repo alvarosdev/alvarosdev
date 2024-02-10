@@ -1,0 +1,47 @@
+---
+interface Props {
+  startDate?: string;
+  endDate?: string;
+  position?: string;
+  url?: string;
+  name?: string;
+  location?: string;
+  summary?: string;
+  highlights?: string[];
+  class?: string;
+}
+
+const {
+  startDate,
+  endDate,
+  position,
+  url,
+  name,
+  location,
+  summary,
+  highlights,
+  class: className,
+} = Astro.props;
+---
+
+<div class:list={["Card", className]}>
+  <h3 class="text-xl font-extrabold">
+    {position}
+    <span class="text-gray-500 text font-bold text-xs">
+      {startDate} - {endDate ?? "Present"}
+    </span>
+  </h3>
+  <p class="text-sm">
+    <span class="italic">
+      <a target="_blank" rel="noopener noreferrer" href={url}>
+        {name}
+      </a>
+      - {location}
+    </span>
+  </p>
+  <p class="my-2 text-gray-400">{summary}</p>
+  <ul class="list-disc list-inside">
+    {highlights?.map((h) => <li>{h}</li>)}
+  </ul>
+  <hr class="my-5 opacity-10" />
+</div>

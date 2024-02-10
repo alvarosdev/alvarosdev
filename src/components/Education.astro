@@ -1,0 +1,47 @@
+---
+interface Props {
+  startDate?: string;
+  endDate?: string;
+  position?: string;
+  url?: string;
+  institution?: string;
+  area?: string;
+  summary?: string;
+  courses?: string[];
+  studyType?: string;
+  class?: string;
+}
+
+const {
+  startDate,
+  endDate,
+  position,
+  url,
+  institution,
+  area,
+  courses,
+  studyType,
+  class: className,
+} = Astro.props;
+---
+
+<div class:list={["Card", className]}>
+  <h3 class="text-xl font-extrabold">
+    {studyType}
+  </h3>
+  <p class="text-sm">
+    <span class="italic">
+      <a target="_blank" rel="noopener noreferrer" href={url}>
+        {institution}
+      </a>
+      - {area}
+    </span>
+  </p>
+  <span class="text-gray-500 text-sm font-bold">
+    {startDate} - {endDate ?? "Present"}
+  </span>
+  <ul class="list-disc list-inside text-sm mt-3">
+    {courses?.map((c) => <li>{c}</li>)}
+  </ul>
+  <hr class="my-5 opacity-10" />
+</div>

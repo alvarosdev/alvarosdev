@@ -1,0 +1,41 @@
+---
+interface Props {
+  organization?: string;
+  position?: string;
+  url?: string;
+  startDate?: string;
+  endDate?: string;
+  summary?: string;
+  highlights?: string[];
+  class?: string;
+}
+const {
+  organization,
+  position,
+  url,
+  startDate,
+  endDate,
+  summary,
+  highlights,
+  class: className,
+} = Astro.props;
+---
+
+<div class:list={["Card", className]}>
+  <h1 class="font-bold text-xl mb-0 pb-0">
+    {organization}
+  </h1>
+  <p>
+    <span class="text-gray-500 text-sm">
+      {position} - {startDate}
+    </span>
+  </p>
+  <p class="text-sm text-gray-300">
+    <span>
+      {summary}
+    </span>
+  </p>
+  <ul class="columns-2 text-sm list-disc list-inside">
+    {highlights.map((keyword) => <li>{keyword}</li>)}
+  </ul>
+</div>

@@ -1,0 +1,304 @@
+{
+  "$schema": "https://raw.githubusercontent.com/reorx/jsoncv/master/schema/jsoncv.schema.json",
+  "basics": {
+    "name": "Álvaro Sebastián G.",
+    "label": "Software/Backend Developer - University Technician in Computer Science",
+    "image": "https://gravatar.com/avatar/a5f5001743d9d960a3025f090b17cb11",
+    "email": "hola@asgg.cl",
+    "phone": "Redacted",
+    "url": "http://alvaros.dev",
+    "summary": "I'm a software developer with a passion for backend development. I have experience in building RESTful APIs with Python, Node.js, and PHP. I'm also experienced in database modeling and management with PostgreSQL, MySQL, and MongoDB. I'm always eager to learn new technologies and improve my skills.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "2260000",
+      "city": "Quillota",
+      "countryCode": "CL",
+      "region": "Valparaíso"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "neutralthoughts"
+      },
+      {
+        "network": "SoundCloud",
+        "username": "dandymusicnl",
+        "url": "https://soundcloud.example.com/dandymusicnl"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Mercadolibre/Mercadopago Chile",
+      "location": "Santiago de Chile, Chile",
+      "position": "Backend Developer",
+      "url": "http://mercadolibre.cl",
+      "startDate": "2023-05-15",
+      "summary": "Mercadolibre is the largest e-commerce platform in Latin America, and its payment system, Mercadopago, is the most used in the region.",
+      "highlights": [
+        "Python & Flask REST API Development",
+        "Database Modeling and Management with PostgreSQL"
+      ]
+    },
+    {
+      "name": "i-Car S.A.",
+      "location": "Santiago de Chile, Chile",
+      "description": "",
+      "position": "Backend Developer",
+      "url": "https://i-car.cl/",
+      "startDate": "2023-02-01",
+      "endDate": "2023-05-14",
+      "summary": "ICAR not only improves the process of First Vehicle Registration by doing it electronically, but also all the processes and procedures necessary for a new and used vehicle to circulate in Chile.",
+      "highlights": [
+        "REST API Development with Node.js & Express",
+        "Web Scrap with Puppeteer"
+      ]
+    },
+    {
+      "name": "Jumpitt Labs SpA",
+      "location": "Valparaíso, Chile",
+      "description": "",
+      "position": "Backend Developer",
+      "url": "http://jumpitt.com",
+      "startDate": "2020-10-01",
+      "endDate": "2023-03-01",
+      "summary": "Jumpitt is always at the forefront of technology and is a leader in solutions that require custom software development. It understands the challenges companies face when looking for innovative, high-performance development solutions.",
+      "highlights": [
+        "REST API Development with Node.js, Koa & Fastify",
+        "JWT Authentication, OAuth w/ Google, Apple Login, and others",
+        "Database Modeling and Management with PostgreSQL & MongoDB"
+      ]
+    },
+    {
+      "name": "Prosys Ingenieria SPA",
+      "location": "Viña del Mar, Chile",
+      "description": "",
+      "position": "Software Developer",
+      "url": "http://prosys.cl",
+      "startDate": "2019-10-01",
+      "endDate": "2020-09-01",
+      "summary": "Prosys is a software factory with 16 years of experience in IT and presence in Santiago and Viña del Mar. It adapts to the diverse technologies that it has seen in its trajectory",
+      "highlights": [
+        "Python webscraping with BeautifulSoup",
+        "Wordpress Development, Custom Themes & Plugins",
+        "Progressive Web App in Ionic4 & Angular",
+        "PHP & Laravel Backend"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Teletón Chile",
+      "position": "Campaign Volunteer",
+      "url": "http://teleton.cl/",
+      "startDate": "2017-11-01",
+      "endDate": "2017-11-01",
+      "summary": "Teletón is a solidarity campaign that seeks to improve the quality of life of children and young people with disabilities.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technical University Federico Santa María",
+      "url": "https://www.usm.cl/",
+      "area": "Information Technology",
+      "studyType": "University Technician in Computer Science",
+      "startDate": "2017-03-01",
+      "endDate": "2019-10-01",
+      "score": "95"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Digital Compression Pioneer Award",
+      "date": "2014-11-01",
+      "awarder": "Techcrunch",
+      "summary": "There is no spoon."
+    },
+    {
+      "title": "Virtual Reality Innovation Award",
+      "date": "2021-06-01",
+      "awarder": "VR Awards",
+      "summary": "The Matrix has you."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Video compression for 3d media",
+      "publisher": "Hooli",
+      "releaseDate": "2014-10-01",
+      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    },
+    {
+      "name": "Audio compression for Virtual Reality",
+      "publisher": "VirtuTech",
+      "releaseDate": "2022-01-01",
+      "url": "http://virtutech.example.com",
+      "summary": "Revolutionary compression technology that enhances the audio experience in virtual reality."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "keywords": [
+        "HTML",
+        "CSS/SCSS",
+        "Javascript",
+        "Python",
+        "PHP",
+        "MySQL",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "keywords": [
+        "Node.js",
+        "Python",
+        "Flask",
+        "Express",
+        "Koa",
+        "Fastify",
+        "RESTful APIs",
+        "Laravel",
+        "FastApi",
+        "OpenApi",
+        "Swagger"
+      ]
+    },
+    {
+      "name": "Database Management",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "FireBase"
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "keywords": [
+        "Astro",
+        "React",
+        "Angular",
+        "Next.js",
+        "Ionic"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Advanced",
+      "summary": "Proficient in English with a pretty good level of speaking, writing and comprehension abilities. Able to effectively communicate ideas and understand complex information in both personal and professional settings. Demonstrates strong grammar skills and a broad vocabulary."
+    },
+    {
+      "language": "French",
+      "fluency": "Elementary"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    },
+    {
+      "name": "Mythical Creatures",
+      "keywords": [
+        "Dragons",
+        "Mermaids"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Erlich Bachman",
+      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    },
+    {
+      "name": "Laurie Bream",
+      "reference": "It is my pleasure to recommend Monica, her exceptional skills and talent were evident during her time at High-Tech Inc. I am confident that she will make a valuable impact at any organization she joins."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Miss Direction",
+      "description": "A mapping engine that misguides you",
+      "highlights": [
+        "Won award at AIHacks 2016",
+        "Built by all women team of newbie programmers",
+        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+      ],
+      "keywords": [
+        "GoogleMaps",
+        "Chrome Extension",
+        "Javascript"
+      ],
+      "startDate": "2016-08-24",
+      "endDate": "2016-08-24",
+      "url": "https://missdirection.example.com",
+      "roles": [
+        "Team lead",
+        "Designer"
+      ],
+      "entity": "Smoogle",
+      "type": "application"
+    },
+    {
+      "name": "Lost in Space",
+      "description": "A cutting-edge navigation app that sends you on wild adventures",
+      "highlights": [
+        "Won the Future Tech Award at the Space Symposium",
+        "Built by a team of skilled astronauts and engineers",
+        "Utilizes advanced technology such as Augmented Reality and AI"
+      ],
+      "keywords": [
+        "Augmented Reality",
+        "AI",
+        "Space navigation"
+      ],
+      "startDate": "2021-07-01",
+      "endDate": "2021-07-01",
+      "url": "https://lostinspace.example.com",
+      "roles": [
+        "Mission Commander",
+        "Navigation Officer"
+      ],
+      "entity": "Cosmic Corp",
+      "type": "Software"
+    }
+  ],
+  "sideProjects": [
+    {
+      "name": "Bebop",
+      "url": "https://bebop.example.com",
+      "description": "A spaceship that flies",
+      "keywords": [
+        "Aerodynamics",
+        "Space travel",
+        "Rocket science"
+      ],
+      "startDate": "2022-01-01"
+    },
+    {
+      "name": "Warp Drive",
+      "url": "https://warpdrive.example.com",
+      "description": "A futuristic spaceship that travels faster than light",
+      "keywords": [
+        "Quantum physics",
+        "Interstellar travel",
+        "Wormholes"
+      ],
+      "startDate": "2025-01-01"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/reorx/jsoncv/master/schema/jsoncv.schema.json",
+    "version": "v2.0.0",
+    "lastModified": "2023-02-12T22:26:00"
+  }
+}

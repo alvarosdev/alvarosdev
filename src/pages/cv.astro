@@ -1,0 +1,88 @@
+---
+import { Picture } from "astro:assets";
+import avatar from "../assets/avatar.jpg";
+import Layout from "../layouts/Layout.astro";
+import { Card, Education, Job, Skill, Volunteer } from "../components";
+import json from "../assets/cv.json";
+---
+
+<Layout title="Resumee">
+  <div class="container mx-auto xl:px-48 lg:px-20 md:px-10 md:pt-5 lg:pt-10">
+    <!-- Bio and other things -->
+    <div class="grid_item_style">
+      <div>
+        <h1 class="font-bold text-4xl">
+          {json.basics.name}
+        </h1>
+        <p>
+          <span class="text-gray-500 text">{json.basics.label}</span>
+        </p>
+        <p>
+          <span class="">
+            {json.basics.summary}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-3">
+      <div class="grid_item_style order-1 lg:col-span-4 sm:col-span-12">
+        <!-- skills -->
+        <div>
+          <h2 class="text-3xl font-bold mb-5 underline">Skills</h2>
+          {json.skills.map((skill) => <Skill class="mb-10" {...skill} />)}
+        </div>
+
+        <!-- volunteer -->
+        <div>
+          <h2 class="text-3xl font-bold mb-5 underline">Volunteer</h2>
+          {json.volunteer.map((v) => <Volunteer class="mb-10" {...v} />)}
+        </div>
+      </div>
+
+      <!-- jobs -->
+      <div class="grid_item_style order-0 lg:col-span-8 sm:col-span-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-5 underline">Work Experience</h2>
+          {json.work.map((work) => <Job class="" {...work} />)}
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-5 underline">Education</h2>
+          {json.education.map((edu) => <Education class="" {...edu} />)}
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="grid lg:grid-cols-3 gap-3 my-5">
+      <div class="grid_item_style col-span-1">
+        <div></div>
+      </div>
+      <div class="grid_item_style col-span-1">
+        <div class="text-xs opacity-50 text-center">
+          <p>
+            <span>
+              Made with <span class="text-red-500">💖</span> by me.
+            </span>
+          </p>
+          <p>
+            <span>
+              This resume was generated using <a href="https://astro.build"
+                >Astro</a
+              >
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="grid_item_style col-span-1">
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .grid_item_style {
+      @apply p-6;
+    }
+  </style>
+</Layout>
