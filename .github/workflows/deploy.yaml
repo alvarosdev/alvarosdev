@@ -12,15 +12,15 @@ jobs:
 
     steps:
       - name: 🌍 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🌍 Using PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: latest
 
       - name: 🌍 Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20.x
 
@@ -31,11 +31,13 @@ jobs:
         run: pnpm run build
 
       - name: 🆙 Upload to SCP
-        uses: Dylan700/sftp-upload-action@latest
+        uses: appleboy/scp-action@master
         with:
-          server: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          key: ${{secrets.key}}
-          port: 22
-          uploads: |
-            ./dist/* => ${{ secrets.TARGET }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: "./dist/*"
+          target: ${{ secrets.TARGET }}
+          overwrite: true
+          strip_components: 1
