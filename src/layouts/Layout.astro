@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/outfit";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 interface Props {
 	title: string;
@@ -12,9 +13,11 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#000" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<title>Alvarosdev - {title}</title>
 	</head>
 
 	<body>
@@ -29,9 +32,6 @@ const { title } = Astro.props;
 		body {
 			font-family: "Outfit Variable", sans-serif;
 			@apply text-white;
-		}
-		a {
-			@apply transition ease-in-out text-blue-300 hover:text-white;
 		}
 	</style>
 </html>

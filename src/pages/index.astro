@@ -1,12 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import { Button } from "../components";
+import { faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faIdCard, faBook } from "@fortawesome/free-solid-svg-icons";
 ---
 
-<Layout title="Welcome to Astro.">
-	<Card>
-		<h2 class="text-2xl">Hola mundo</h2>
-	</Card>
+<Layout title="Software Developer">
+	<div class="grid grid-cols-3 place-items-center">
+		<div class="col-span-full">
+			<div class="my-32 text-center">
+				<p class="text-4xl">Under construction, please come back later.</p>
+				<p class="text-2xl">
+					In the meantime, you can check my social media or my CV.
+				</p>
+			</div>
+		</div>
+		<div class="col-span-full">
+			<Button icon={faLinkedin} iconSize="2" url="//linkedin.com">
+				<span class="text-xl">Linkedin</span>
+			</Button>
+			<Button target="_parent" icon={faIdCard} iconSize="2" url="/cv">
+				<span class="text-xl">My CV</span>
+			</Button>
+			<Button
+				target="_blank"
+				icon={faDiscord}
+				iconSize="2"
+				url="//discordapp.com/users/122463346418122752"
+			>
+				<span class="text-xl">Discord</span>
+			</Button>
+			<Button target="_self" icon={faBook} iconSize="2" url="/blog">
+				<span class="text-xl">Blog</span>
+			</Button>
+		</div>
+	</div>
 </Layout>
 
 <style></style>
