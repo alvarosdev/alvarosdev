@@ -14,21 +14,15 @@ jobs:
       - name: 🌍 Checkout code
         uses: actions/checkout@v4
 
-      - name: 🌍 Using PNPM
-        uses: pnpm/action-setup@v3
+      - uses: oven-sh/setup-bun@v1
         with:
-          version: latest
+          bun-version: latest
 
-      - name: 🌍 Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
-
-      - name: 📦 Install NPM packages
-        run: pnpm i
+      - name: 📦 Install packages
+        run: bun install
 
       - name: 🔧 Build project
-        run: pnpm run build
+        run: bun run build
 
       - name: 🆙 Upload to SCP
         uses: appleboy/scp-action@master
