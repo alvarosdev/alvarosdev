@@ -2,6 +2,7 @@
   <img src="https://img.shields.io/github/discussions/alvarosdev/alvarosdev">
   <img src="https://img.shields.io/github/repo-size/alvarosdev/alvarosdev">
   <img src="https://img.shields.io/discord/123657689870893058?logo=discord&label=discord">
+  <img src="https://badgen.net/badge/My%20Website/www.alvaros.dev/orange">
 </p>
 
 # ![](https://cdn.7tv.app/emote/65071361714d175392372a0c/1x.webp)Hello there
