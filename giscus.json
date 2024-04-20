@@ -1,7 +1,8 @@
 {
   "origins": [
     "https://alvaros.dev",
-    "https://asgg.cl"
+    "https://asgg.cl",
+    "http://localhost"
   ],
   "defaultCommentOrder": "oldest"
 }
